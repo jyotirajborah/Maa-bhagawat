@@ -1677,7 +1677,7 @@
     <p>Registration is open to all — entry is free. Seats are limited. Secure your place in this divine satsang and receive updates on venue, schedule, and accommodation.</p>
     <div class="register-form">
 
-      <button class="register-submit" onclick="handleRegister(event)">Register for Pancham Ved — Free Entry</button>
+      <a href="https://forms.gle/uHwF7zAghp5rkq9p7" target="_blank" class="register-submit" style="display:block; text-align:center; text-decoration:none; box-sizing:border-box;">Register for Pancham Ved — Free Entry</a>
     </div>
     <p class="register-note">🌸 Prasad Seva will be offered daily. Accommodation assistance available on request.</p>
     <div style="margin-top:40px; border-top:1px solid rgba(255,255,255,0.1); padding-top:24px;">
@@ -1793,18 +1793,7 @@
     }
   }
 
-  function handleRegister(e) {
-    e.preventDefault();
-    const btn = e.target;
-    btn.textContent = '🌸 Radhey Radhey — Registered Successfully!';
-    btn.style.background = '#4caf50';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.textContent = 'Register for Pancham Ved — Free Entry';
-      btn.style.background = '';
-      btn.style.color = '';
-    }, 4000);
-  }
+
 
   // Gallery slider logic
   function scrollGallery(direction) {
