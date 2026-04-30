@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pancham Ved Shrimad Bhagwat Mahapuran Gyanrahasya — Udaipur | BGSM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Cinzel:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --indigo: #1a237e;
+    --indigo-mid: #283593;
+    --indigo-deep: #0d1757;
+    --indigo-light: #3949ab;
+    --gold: #f9c513;
+    --gold-soft: #fdd835;
+    --gold-pale: #fff9c4;
+    --white: #ffffff;
+    --cream: #fefdf5;
+    --saffron: #ff8f00;
+    --lotus-pink: #e8b4b8;
+    --text-dark: #0d1757;
+    --text-mid: #283593;
+
+    /* ── BGSM Brand Palette ── */
+    --brand-indigo: #1a237e;
+    --brand-yellow: #f9c513;
+    --brand-white: #ffffff;
+
+    /* Section alternating backgrounds */
+    --sec-dark:  #0d1757;          /* deep indigo */
+    --sec-mid:   #1a237e;          /* brand indigo */
+    --sec-light: #ffffff;          /* white */
+    --sec-yellow: #f9c513;         /* brand yellow */
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', serif;
+    background: var(--indigo-deep);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── ORNAMENT ── */
+  .om-symbol { font-family: 'Noto Sans Devanagari', sans-serif; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(13,23,87,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--brand-yellow);
+    box-shadow: 0 2px 20px rgba(13,23,87,0.3);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .nav-emblem {
+    width: 44px; height: 44px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; color: var(--indigo-deep);
+    font-weight: 700; font-family: 'Noto Sans Devanagari', sans-serif;
+    box-shadow: 0 0 0 2px rgba(249,197,19,0.4);
+    animation: pulse-gold 3s ease-in-out infinite;
+  }
+  @keyframes pulse-gold {
+    0%,100% { box-shadow: 0 0 0 2px rgba(249,197,19,0.4), 0 0 0 0 rgba(249,197,19,0); }
+    50% { box-shadow: 0 0 0 2px rgba(249,197,19,0.4), 0 0 16px 4px rgba(249,197,19,0.2); }
+  }
+  .nav-title { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 2px; color: var(--gold); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    transition: color .3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-register {
+    background: var(--gold); color: var(--indigo-deep);
+    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 1.5px; font-weight: 700;
+    padding: 9px 22px; border-radius: 3px; text-decoration: none;
+    transition: background .3s, transform .2s;
+  }
+  .nav-register:hover { background: var(--gold-soft); transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    padding-top: 80px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 30%, rgba(57,73,171,0.4) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 80% at 20% 80%, rgba(249,197,19,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 80% 20%, rgba(26,35,126,0.6) 0%, transparent 70%),
+      linear-gradient(160deg, #0d1757 0%, #1a237e 40%, #0a1245 100%);
+  }
+  .hero-mandala {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0.04;
+  }
+  .hero-mandala svg { width: 800px; height: 800px; animation: spin-slow 120s linear infinite; }
+  @keyframes spin-slow { to { transform: rotate(360deg); } }
+
+  /* lotus petals scattered */
+  .lotus-scatter {
+    position: absolute; inset: 0; pointer-events: none; overflow: hidden;
+  }
+  .lotus-scatter span {
+    position: absolute;
+    font-size: 18px;
+    opacity: 0.1;
+    animation: float-petal linear infinite;
+  }
+  @keyframes float-petal {
+    0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.12; }
+    90% { opacity: 0.06; }
+    100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center; padding: 60px 24px;
+    max-width: 820px;
+    animation: hero-fade-in 1.4s ease-out both;
+  }
+  @keyframes hero-fade-in {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    border: 1px solid rgba(249,197,19,0.35);
+    background: rgba(249,197,19,0.08);
+    padding: 8px 20px; border-radius: 30px;
+    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2.5px;
+    color: var(--gold); margin-bottom: 28px;
+  }
+  .hero-badge span { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; display: inline-block; }
+  .hero-devanagari {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: clamp(16px, 3vw, 22px);
+    color: rgba(249,197,19,0.7);
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(32px, 6vw, 62px);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 10px;
+    text-shadow: 0 2px 40px rgba(249,197,19,0.2);
+  }
+  .hero-title-sub {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(15px, 2.5vw, 22px);
+    font-weight: 400; letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .hero-divider {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    margin-bottom: 24px;
+  }
+  .hero-divider hr { width: 60px; border: none; border-top: 1px solid rgba(249,197,19,0.4); }
+  .hero-divider-lotus { color: var(--gold); font-size: 16px; }
+  .hero-speaker {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 3vw, 24px);
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 8px;
+  }
+  .hero-speaker strong {
+    font-style: normal; color: var(--white); font-weight: 600;
+  }
+  .hero-org {
+    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px;
+    color: rgba(249,197,19,0.6); margin-bottom: 36px;
+  }
+  .hero-date-strip {
+    display: inline-flex; gap: 0;
+    border: 1px solid rgba(249,197,19,0.3);
+    border-radius: 4px; overflow: hidden;
+    margin-bottom: 40px;
+  }
+  .hero-date-item {
+    padding: 14px 28px;
+    border-right: 1px solid rgba(249,197,19,0.2);
+    text-align: center;
+  }
+  .hero-date-item:last-child { border-right: none; }
+  .hero-date-label {
+    font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 2px;
+    color: rgba(249,197,19,0.6); display: block; margin-bottom: 4px;
+  }
+  .hero-date-value {
+    font-family: 'Cinzel', serif; font-size: 15px; font-weight: 600;
+    color: var(--white);
+  }
+  .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: var(--indigo-deep);
+    font-family: 'Cinzel', serif; font-size: 12px; font-weight: 700; letter-spacing: 2px;
+    padding: 15px 36px; border-radius: 3px; text-decoration: none;
+    transition: all .3s; display: inline-block;
+    box-shadow: 0 4px 30px rgba(249,197,19,0.3);
+  }
+  .btn-primary:hover { background: var(--gold-soft); transform: translateY(-2px); box-shadow: 0 8px 40px rgba(249,197,19,0.45); }
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.4); color: var(--white);
+    font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 2px;
+    padding: 14px 36px; border-radius: 3px; text-decoration: none;
+    transition: all .3s; display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+  /* ── SCROLL INDICATOR ── */
+  .scroll-hint {
+    position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 2px;
+    color: rgba(255,255,255,0.3);
+  }
+  .scroll-hint-bar {
+    width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(249,197,19,0.6), transparent);
+    animation: scroll-drop 2s ease-in-out infinite;
+  }
+  @keyframes scroll-drop {
+    0%,100% { opacity: 0; transform: scaleY(0); transform-origin: top; }
+    50% { opacity: 1; transform: scaleY(1); }
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 100px 24px; }
+  .section-container { max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow {
+    font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 3px;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-eyebrow::before, .section-eyebrow::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, transparent, rgba(249,197,19,0.4));
+  }
+  .section-eyebrow::after { background: linear-gradient(to left, transparent, rgba(249,197,19,0.4)); }
+  .section-heading {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(26px, 4vw, 42px); font-weight: 600;
+    color: var(--white); text-align: center; margin-bottom: 16px;
+  }
+  .section-sub {
+    font-size: 18px; font-style: italic; color: rgba(255,255,255,0.6);
+    text-align: center; max-width: 640px; margin: 0 auto 60px;
+    line-height: 1.7;
+  }
+
+  /* ── ABOUT PRAVACHAN ── */
+  #about { background: var(--brand-white); }
+  #about .section-eyebrow { color: var(--brand-indigo); }
+  #about .section-eyebrow::before { background: linear-gradient(to right, transparent, rgba(26,35,126,0.3)); }
+  #about .section-eyebrow::after  { background: linear-gradient(to left,  transparent, rgba(26,35,126,0.3)); }
+  #about .section-heading { color: var(--brand-indigo); }
+  #about .section-sub { color: rgba(26,35,126,0.7); }
+  #about .about-text h3 { color: var(--brand-indigo); }
+  #about .about-text p { color: rgba(13,23,87,0.8); }
+  #about .about-text p strong { color: var(--brand-indigo); }
+  #about .about-panel {
+    background: var(--brand-indigo);
+    border: none;
+    box-shadow: 0 8px 40px rgba(13,23,87,0.15);
+  }
+  #about .about-stat { border-bottom-color: rgba(249,197,19,0.25); }
+  #about .about-stat-label { color: rgba(249,197,19,0.8); }
+  #about .about-stat-value { color: #ffffff; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .about-text h3 {
+    font-family: 'Cinzel', serif; font-size: 22px; color: var(--gold);
+    margin-bottom: 18px; font-weight: 500;
+  }
+  .about-text p {
+    font-size: 18px; line-height: 1.9; color: rgba(255,255,255,0.75);
+    margin-bottom: 16px;
+  }
+  .about-text p strong { color: var(--white); font-weight: 600; }
+  .about-panel {
+    background: rgba(249,197,19,0.06);
+    border: 1px solid rgba(249,197,19,0.2);
+    border-radius: 8px; padding: 36px;
+    display: flex; flex-direction: column; gap: 24px;
+  }
+  .about-stat {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding-bottom: 24px; border-bottom: 1px solid rgba(249,197,19,0.12);
+  }
+  .about-stat:last-child { border-bottom: none; padding-bottom: 0; }
+  .about-stat-icon { font-size: 28px; line-height: 1; }
+  .about-stat-label {
+    font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 2px;
+    color: rgba(249,197,19,0.6); margin-bottom: 4px;
+  }
+  .about-stat-value { font-size: 20px; font-weight: 600; color: var(--white); }
+
+  /* ── SPEAKER ── */
+  #speaker { background: var(--brand-yellow); }
+  #speaker .section-eyebrow { color: var(--brand-indigo); }
+  #speaker .section-eyebrow::before { background: linear-gradient(to right, transparent, rgba(26,35,126,0.3)); }
+  #speaker .section-eyebrow::after  { background: linear-gradient(to left,  transparent, rgba(26,35,126,0.3)); }
+  #speaker .section-heading { color: var(--brand-indigo); }
+  #speaker .section-sub { color: rgba(13,23,87,0.75); }
+  #speaker .speaker-info h2 { color: var(--brand-indigo); }
+  #speaker .speaker-epithet { color: var(--brand-indigo); font-weight: 700; }
+  #speaker .speaker-info p { color: rgba(13,23,87,0.8); }
+  #speaker .speaker-tag {
+    border-color: rgba(26,35,126,0.4);
+    color: var(--brand-indigo);
+  }
+  #speaker .speaker-img-frame { border-color: rgba(26,35,126,0.3); }
+  #speaker .speaker-name-card {
+    background: rgba(26,35,126,0.08);
+    border-color: rgba(26,35,126,0.2);
+  }
+  #speaker .speaker-title-devanagari { color: var(--brand-indigo); }
+  #speaker .speaker-title-roman { color: rgba(13,23,87,0.65); }
+  #speaker .speaker-gold-accent { background: linear-gradient(to right, transparent, var(--brand-indigo), transparent); }
+  .speaker-grid { display: grid; grid-template-columns: 340px 1fr; gap: 70px; align-items: start; }
+  .speaker-portrait {
+    position: relative;
+  }
+  .speaker-img-frame {
+    position: relative;
+    border-radius: 8px; overflow: hidden;
+    aspect-ratio: 3/4;
+    background: linear-gradient(135deg, rgba(57,73,171,0.5), rgba(26,35,126,0.8));
+    border: 1px solid rgba(249,197,19,0.25);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .speaker-img-placeholder {
+    text-align: center; color: rgba(249,197,19,0.5);
+    font-family: 'Noto Sans Devanagari', sans-serif; font-size: 80px;
+    line-height: 1;
+  }
+  .speaker-img-placeholder p {
+    font-family: 'Cormorant Garamond', serif; font-size: 13px;
+    color: rgba(255,255,255,0.4); margin-top: 10px; letter-spacing: 1px;
+  }
+  .speaker-real-img {
+    width: 100%; height: 100%; object-fit: cover; object-position: top center;
+    display: block;
+  }
+  .speaker-gold-accent {
+    position: absolute; bottom: -1px; left: 0; right: 0; height: 4px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+  .speaker-name-card {
+    background: linear-gradient(135deg, rgba(249,197,19,0.12), rgba(249,197,19,0.04));
+    border: 1px solid rgba(249,197,19,0.2); border-radius: 6px;
+    padding: 16px 20px; margin-top: 16px; text-align: center;
+  }
+  .speaker-title-devanagari {
+    font-family: 'Noto Sans Devanagari', sans-serif; font-size: 15px;
+    color: var(--gold); margin-bottom: 4px;
+  }
+  .speaker-title-roman {
+    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.6);
+  }
+  .speaker-info h2 {
+    font-family: 'Cinzel', serif; font-size: clamp(24px, 3.5vw, 36px);
+    color: var(--white); margin-bottom: 6px; line-height: 1.2;
+  }
+  .speaker-epithet {
+    font-size: 18px; font-style: italic; color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .speaker-info p {
+    font-size: 17px; line-height: 1.9; color: rgba(255,255,255,0.72);
+    margin-bottom: 14px;
+  }
+  .speaker-tags {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
+  }
+  .speaker-tag {
+    border: 1px solid rgba(249,197,19,0.25); padding: 5px 14px;
+    border-radius: 20px; font-family: 'Cinzel', serif;
+    font-size: 10px; letter-spacing: 1.5px; color: rgba(249,197,19,0.8);
+  }
+
+  /* ── SCHEDULE ── */
+  #schedule {
+    background: var(--brand-white);
+  }
+  #schedule .section-eyebrow { color: var(--brand-indigo); }
+  #schedule .section-eyebrow::before { background: linear-gradient(to right, transparent, rgba(26,35,126,0.3)); }
+  #schedule .section-eyebrow::after  { background: linear-gradient(to left,  transparent, rgba(26,35,126,0.3)); }
+  #schedule .section-heading { color: var(--brand-indigo); }
+  #schedule .section-sub { color: rgba(26,35,126,0.7); }
+  #schedule .schedule-card {
+    background: #f5f6ff;
+    border-color: rgba(26,35,126,0.12);
+    border-top-color: var(--brand-indigo);
+    box-shadow: 0 2px 16px rgba(26,35,126,0.07);
+  }
+  #schedule .schedule-card:hover {
+    background: #eef0ff;
+    box-shadow: 0 12px 40px rgba(26,35,126,0.14);
+  }
+  #schedule .schedule-day { color: rgba(26,35,126,0.55); }
+  #schedule .schedule-date { color: var(--brand-indigo); }
+  #schedule .schedule-time { color: var(--brand-indigo); font-weight: 600; }
+  #schedule .schedule-event-name { color: rgba(13,23,87,0.75); }
+  .schedule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .schedule-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(249,197,19,0.15);
+    border-top: 3px solid var(--gold);
+    border-radius: 8px; padding: 28px 24px;
+    transition: all .3s; cursor: default;
+  }
+  .schedule-card:hover {
+    background: rgba(249,197,19,0.06);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  }
+  .schedule-day {
+    font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 2px;
+    color: rgba(249,197,19,0.6); margin-bottom: 4px;
+  }
+  .schedule-date {
+    font-family: 'Cinzel', serif; font-size: 22px; font-weight: 600;
+    color: var(--white); margin-bottom: 16px;
+  }
+  .schedule-event {
+    display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;
+  }
+  .schedule-time {
+    font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 1px;
+    color: var(--gold); white-space: nowrap; min-width: 68px;
+    padding-top: 2px;
+  }
+  .schedule-event-name { font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.4; }
+
+  /* ── SNEAK PEEK VIDEOS ── */
+  #videos { background: var(--brand-indigo); }
+  .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+  .video-card {
+    position: relative; border-radius: 10px; overflow: hidden;
+    background: rgba(57,73,171,0.2);
+    border: 1px solid rgba(249,197,19,0.2);
+    cursor: pointer; transition: all .3s;
+  }
+  .video-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.6); border-color: rgba(249,197,19,0.5); }
+  .video-thumb {
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #1a237e, #283593);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .video-thumb-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(26,35,126,0.8), rgba(13,23,87,0.95));
+  }
+  .video-thumb-pattern {
+    position: absolute; inset: 0; opacity: 0.15;
+    background-image: radial-gradient(circle, rgba(249,197,19,0.6) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  .video-play-btn {
+    position: relative; z-index: 2;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: rgba(249,197,19,0.9);
+    display: flex; align-items: center; justify-content: center;
+    transition: all .3s;
+  }
+  .video-card:hover .video-play-btn { background: var(--gold); transform: scale(1.1); }
+  .video-play-btn svg { width: 22px; height: 22px; fill: var(--indigo-deep); margin-left: 3px; }
+  .video-thumb-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 20px 16px 12px;
+    background: linear-gradient(to top, rgba(13,23,87,0.95), transparent);
+    font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 2px; color: var(--gold);
+    z-index: 2;
+  }
+  .video-info { padding: 16px 18px; }
+  .video-title { font-size: 17px; font-weight: 600; color: var(--white); margin-bottom: 6px; line-height: 1.4; }
+  .video-desc { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--brand-yellow); }
+  #testimonials .section-eyebrow { color: var(--brand-indigo); }
+  #testimonials .section-eyebrow::before { background: linear-gradient(to right, transparent, rgba(26,35,126,0.3)); }
+  #testimonials .section-eyebrow::after  { background: linear-gradient(to left,  transparent, rgba(26,35,126,0.3)); }
+  #testimonials .section-heading { color: var(--brand-indigo); }
+  #testimonials .section-sub { color: rgba(13,23,87,0.75); }
+  #testimonials .testimonial-card {
+    background: var(--brand-white);
+    border: none;
+    box-shadow: 0 4px 24px rgba(26,35,126,0.1);
+  }
+  #testimonials .testimonial-card:hover {
+    background: var(--brand-white);
+    box-shadow: 0 16px 50px rgba(26,35,126,0.2);
+  }
+  #testimonials .testimonial-quote-mark { color: rgba(26,35,126,0.08); }
+  #testimonials .testimonial-stars { color: var(--brand-indigo); }
+  #testimonials .testimonial-text { color: rgba(13,23,87,0.8); }
+  #testimonials .testimonial-author-name { color: var(--brand-indigo); }
+  #testimonials .testimonial-author-loc { color: rgba(26,35,126,0.5); }
+  #testimonials .testimonial-avatar {
+    background: var(--brand-indigo);
+    border-color: rgba(249,197,19,0.6);
+    color: var(--brand-yellow);
+  }
+  .testimonials-carousel { position: relative; overflow: hidden; }
+  .testimonials-track {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .testimonial-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(249,197,19,0.15);
+    border-radius: 10px; padding: 32px 28px;
+    position: relative; transition: all .3s;
+  }
+  .testimonial-card:hover {
+    background: rgba(249,197,19,0.06); transform: translateY(-4px);
+    box-shadow: 0 16px 50px rgba(0,0,0,0.4);
+  }
+  .testimonial-quote-mark {
+    position: absolute; top: 18px; right: 22px;
+    font-family: 'Cinzel', serif; font-size: 64px; color: rgba(249,197,19,0.07);
+    line-height: 1;
+  }
+  .testimonial-stars { color: var(--gold); font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
+  .testimonial-text {
+    font-size: 17px; font-style: italic; line-height: 1.8;
+    color: rgba(255,255,255,0.78); margin-bottom: 22px;
+  }
+  .testimonial-author {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .testimonial-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--indigo-light), var(--indigo));
+    border: 2px solid rgba(249,197,19,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cinzel', serif; font-size: 15px; font-weight: 600; color: var(--gold);
+    flex-shrink: 0;
+  }
+  .testimonial-author-name { font-size: 16px; font-weight: 600; color: var(--white); }
+  .testimonial-author-loc { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 1.5px; color: rgba(249,197,19,0.5); margin-top: 2px; }
+
+  /* ── GALLERY SLIDER ── */
+  .gallery-wrapper {
+    position: relative;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .gallery-slider {
+    display: flex; overflow-x: auto; gap: 24px; padding-bottom: 24px;
+    scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none;
+    scroll-behavior: smooth;
+  }
+  .gallery-slider::-webkit-scrollbar { display: none; }
+  .gallery-item {
+    flex: 0 0 85%; max-width: 800px; scroll-snap-align: center;
+    border-radius: 10px; overflow: hidden; border: 1px solid rgba(249,197,19,0.2);
+    position: relative; aspect-ratio: 16/9;
+  }
+  @media (min-width: 768px) { .gallery-item { flex: 0 0 60%; } }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-label {
+    position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 20px 16px;
+    background: linear-gradient(to top, rgba(13,23,87,0.9), transparent);
+    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px; color: var(--gold); text-transform: uppercase;
+  }
+  .slider-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(26,35,126,0.9); color: var(--gold);
+    border: 1px solid rgba(249,197,19,0.5); border-radius: 50%;
+    width: 48px; height: 48px; font-size: 20px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; z-index: 10; transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .slider-btn:hover { background: var(--gold); color: var(--brand-indigo); }
+  .slider-btn.prev-btn { left: -16px; }
+  .slider-btn.next-btn { right: -16px; }
+  @media (max-width: 768px) {
+    .slider-btn.prev-btn { left: 8px; }
+    .slider-btn.next-btn { right: 8px; }
+  }
+
+  /* ── MAP / GET THERE ── */
+  #venue {
+    background: var(--brand-white);
+    padding-top: 80px; padding-bottom: 80px;
+  }
+  #venue .section-eyebrow { color: var(--brand-indigo); }
+  #venue .section-eyebrow::before { background: linear-gradient(to right, transparent, rgba(26,35,126,0.3)); }
+  #venue .section-eyebrow::after  { background: linear-gradient(to left,  transparent, rgba(26,35,126,0.3)); }
+  #venue .section-heading { color: var(--brand-indigo); }
+  #venue .section-sub { color: rgba(26,35,126,0.7); }
+  #venue .venue-location-type { color: var(--brand-indigo); }
+  #venue .venue-info h3 { color: var(--brand-indigo); }
+  #venue .venue-detail-text { color: rgba(13,23,87,0.75); }
+  #venue .venue-detail-text strong { color: var(--brand-indigo); }
+  #venue .venue-divider { border-top-color: rgba(26,35,126,0.15); }
+  #venue .how-to-get {
+    background: #f5f6ff;
+    border-color: rgba(26,35,126,0.15);
+  }
+  #venue .how-to-get h4 { color: var(--brand-indigo); }
+  #venue .transport-info { color: rgba(13,23,87,0.65); }
+  #venue .transport-info strong { color: var(--brand-indigo); }
+  #venue .directions-btn {
+    background: var(--brand-indigo);
+    color: var(--brand-yellow);
+  }
+  #venue .directions-btn:hover { background: #283593; }
+  #venue p[style*="color:rgba(249,197,19"] { color: rgba(26,35,126,0.45) !important; }
+  .venue-grid { display: grid; grid-template-columns: 1fr 420px; gap: 50px; align-items: start; }
+  .map-frame {
+    border-radius: 12px; overflow: hidden;
+    border: 1px solid rgba(249,197,19,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    height: 420px;
+  }
+  .map-frame iframe { width: 100%; height: 100%; border: none; filter: grayscale(20%) brightness(0.85) saturate(1.2); }
+  .venue-info h3 {
+    font-family: 'Cinzel', serif; font-size: 22px; font-weight: 600;
+    color: var(--white); margin-bottom: 6px;
+  }
+  .venue-location-type {
+    font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 2px;
+    color: var(--gold); margin-bottom: 20px;
+  }
+  .venue-detail {
+    display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start;
+  }
+  .venue-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .venue-detail-text { font-size: 16px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+  .venue-detail-text strong { color: var(--white); }
+  .venue-divider { border: none; border-top: 1px solid rgba(249,197,19,0.15); margin: 24px 0; }
+  .how-to-get {
+    background: rgba(249,197,19,0.06); border: 1px solid rgba(249,197,19,0.15);
+    border-radius: 8px; padding: 22px;
+  }
+  .how-to-get h4 {
+    font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 2px;
+    color: var(--gold); margin-bottom: 14px;
+  }
+  .transport-option { display: flex; gap: 10px; margin-bottom: 10px; }
+  .transport-icon { font-size: 18px; }
+  .transport-info { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.5; }
+  .transport-info strong { color: rgba(255,255,255,0.9); display: block; }
+  .directions-btn {
+    display: block; margin-top: 16px;
+    background: var(--gold); color: var(--indigo-deep);
+    font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    padding: 11px 0; border-radius: 4px; text-decoration: none;
+    text-align: center; transition: all .3s;
+  }
+  .directions-btn:hover { background: var(--gold-soft); }
+
+  /* ── REGISTER ── */
+  #register {
+    background: linear-gradient(135deg, #0d1757 0%, #1a237e 50%, #0d1757 100%);
+    padding: 100px 24px;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  #register::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 50% at 50% 50%, rgba(249,197,19,0.07), transparent);
+  }
+  .register-content { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
+  .register-om {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: 48px; color: rgba(249,197,19,0.4);
+    margin-bottom: 16px; display: block;
+  }
+  .register-content h2 {
+    font-family: 'Cinzel', serif; font-size: clamp(28px, 4vw, 42px);
+    color: var(--white); margin-bottom: 14px;
+  }
+  .register-content p {
+    font-size: 18px; font-style: italic; color: rgba(255,255,255,0.65);
+    line-height: 1.7; margin-bottom: 36px;
+  }
+  .register-form {
+    display: flex; flex-direction: column; gap: 14px; max-width: 480px; margin: 0 auto;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-field {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(249,197,19,0.2);
+    border-radius: 4px; padding: 13px 16px;
+    font-family: 'Cormorant Garamond', serif; font-size: 16px;
+    color: var(--white); outline: none; width: 100%;
+    transition: border-color .3s;
+  }
+  .form-field::placeholder { color: rgba(255,255,255,0.3); }
+  .form-field:focus { border-color: var(--gold); }
+  .register-submit {
+    background: var(--gold); color: var(--indigo-deep);
+    font-family: 'Cinzel', serif; font-size: 13px; font-weight: 700; letter-spacing: 2px;
+    padding: 16px; border-radius: 4px; border: none; cursor: pointer;
+    transition: all .3s; margin-top: 4px;
+  }
+  .register-submit:hover { background: var(--gold-soft); transform: translateY(-2px); }
+  .register-note {
+    font-size: 13px; color: rgba(255,255,255,0.35);
+    margin-top: 16px; font-style: italic;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0a1040; border-top: 3px solid var(--brand-yellow); padding: 50px 24px 30px;
+    text-align: center;
+  }
+  .footer-emblem {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: 32px; color: var(--gold); margin-bottom: 12px;
+  }
+  .footer-org {
+    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 3px;
+    color: rgba(249,197,19,0.6); margin-bottom: 6px;
+  }
+  .footer-tagline {
+    font-size: 14px; font-style: italic; color: rgba(255,255,255,0.3);
+    margin-bottom: 24px;
+  }
+  .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+  .footer-links a {
+    font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 2px;
+    color: rgba(255,255,255,0.3); text-decoration: none; transition: color .3s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.15); }
+
+  /* ── FLOATING REGISTER STRIP ── */
+  .sticky-cta {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+    background: var(--brand-yellow); border-top: 3px solid var(--brand-indigo);
+    padding: 12px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; transform: translateY(100%);
+    animation: slide-up-cta 1s 2s ease forwards;
+  }
+  @keyframes slide-up-cta {
+    to { transform: translateY(0); }
+  }
+  .sticky-cta-text {
+    font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 1.5px;
+    color: var(--brand-indigo);
+  }
+  .sticky-cta-text span { color: var(--brand-indigo); font-weight: 700; }
+  .sticky-cta-btn {
+    background: var(--brand-indigo); color: var(--brand-yellow);
+    font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    padding: 10px 24px; border-radius: 3px; text-decoration: none;
+    white-space: nowrap; transition: background .3s;
+  }
+  .sticky-cta-btn:hover { background: #283593; }
+
+  /* ── VIDEO MODAL ── */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 999;
+    background: rgba(0,0,0,0.85); display: none;
+    align-items: center; justify-content: center;
+    backdrop-filter: blur(8px);
+  }
+  .modal-overlay.active { display: flex; }
+  .modal-box {
+    background: #ffffff; border: 2px solid var(--brand-indigo);
+    border-radius: 12px; width: min(700px, 95vw); overflow: hidden;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute; top: 14px; right: 14px;
+    background: var(--brand-indigo); border: 1px solid var(--brand-indigo);
+    color: var(--brand-yellow); width: 32px; height: 32px;
+    border-radius: 50%; cursor: pointer; font-size: 16px;
+    display: flex; align-items: center; justify-content: center; z-index: 10;
+    transition: background .3s;
+  }
+  .modal-close:hover { background: rgba(249,197,19,0.3); }
+  .modal-video {
+    aspect-ratio: 16/9;
+    background: #000; display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: rgba(255,255,255,0.4); font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .modal-video iframe { width: 100%; height: 100%; border: none; }
+  .modal-info { padding: 20px 24px; }
+  .modal-title { font-family: 'Cinzel', serif; font-size: 16px; color: var(--brand-indigo); margin-bottom: 6px; }
+  .modal-description { font-size: 15px; color: rgba(13,23,87,0.65); line-height: 1.6; }
+
+  /* ── ABOUT STAT BOXES ── */
+  .about-stats-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px;
+  }
+  .about-stat-box {
+    background: #f5f6ff; border: 1px solid rgba(26,35,126,0.12);
+    border-radius: 8px; padding: 20px 16px; text-align: center;
+    transition: all .3s;
+  }
+  .about-stat-box:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(26,35,126,0.12); }
+  .about-stat-box-value {
+    font-family: 'Cinzel', serif; font-size: 28px; font-weight: 700;
+    color: var(--brand-indigo); margin-bottom: 4px;
+  }
+  .about-stat-box-label {
+    font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 1.5px;
+    color: rgba(26,35,126,0.55); text-transform: uppercase;
+  }
+
+  /* ── ABOUT HIGHLIGHTS CHECKLIST ── */
+  .about-highlight {
+    display: flex; align-items: center; gap: 14px;
+    padding: 12px 0; border-bottom: 1px solid rgba(249,197,19,0.15);
+    font-size: 16px; color: rgba(255,255,255,0.88); line-height: 1.5;
+  }
+  .about-highlight:last-child { border-bottom: none; }
+  .highlight-check {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--gold); color: var(--indigo-deep);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700; flex-shrink: 0;
+  }
+
+  /* ── TABBED SCHEDULE ── */
+  .schedule-tabs {
+    display: flex; justify-content: center; gap: 8px; margin-bottom: 40px; flex-wrap: wrap;
+  }
+  .schedule-tab {
+    width: 52px; height: 52px; border-radius: 50%;
+    border: 2px solid rgba(26,35,126,0.2); background: #f5f6ff;
+    font-family: 'Cinzel', serif; font-size: 14px; font-weight: 600;
+    color: var(--brand-indigo); cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: all .3s; position: relative;
+  }
+  .schedule-tab span {
+    font-size: 8px; letter-spacing: 1px; font-weight: 400; margin-top: 1px;
+  }
+  .schedule-tab:hover { border-color: var(--brand-indigo); background: #eef0ff; }
+  .schedule-tab.active {
+    background: var(--brand-indigo); color: var(--brand-yellow);
+    border-color: var(--brand-indigo);
+    box-shadow: 0 4px 20px rgba(26,35,126,0.3);
+  }
+  .schedule-tab.active span { color: var(--brand-yellow); }
+
+  .schedule-day-title {
+    text-align: center; margin-bottom: 32px;
+  }
+  .schedule-day-title h3 {
+    font-family: 'Cinzel', serif; font-size: 24px; font-weight: 600;
+    color: var(--brand-indigo); margin-bottom: 4px;
+  }
+  .schedule-day-title p {
+    font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 2px;
+    color: var(--saffron); font-weight: 500;
+  }
+
+  .schedule-timeline {
+    max-width: 860px; margin: 0 auto; position: relative;
+  }
+  .schedule-timeline::before {
+    content: ''; position: absolute; left: 50%; top: 0; bottom: 0;
+    width: 2px; background: var(--brand-indigo);
+    transform: translateX(-50%);
+    opacity: 0.7;
+  }
+  .timeline-item {
+    display: flex; align-items: center; margin-bottom: 40px; position: relative;
+    opacity: 0; transform: translateY(20px);
+    animation: tl-fade-in 0.4s ease forwards;
+  }
+  @keyframes tl-fade-in {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .timeline-item:nth-child(odd) { flex-direction: row; }
+  .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+  .timeline-time {
+    flex: 1; text-align: right; padding-right: 40px;
+    font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 2px;
+    color: var(--brand-indigo); font-weight: 600;
+  }
+  .timeline-item:nth-child(even) .timeline-time {
+    text-align: left; padding-right: 0; padding-left: 40px;
+  }
+  .timeline-dot {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--brand-yellow); border: 4px solid var(--brand-indigo);
+    flex-shrink: 0; z-index: 2; position: relative;
+  }
+  .timeline-content {
+    flex: 1; padding-left: 40px; margin-left: 0;
+    transition: all .3s;
+  }
+  .timeline-item:nth-child(odd) .timeline-content {
+    padding-left: 40px;
+  }
+  .timeline-item:nth-child(even) .timeline-content {
+    padding-left: 0; padding-right: 40px; text-align: right;
+  }
+  .timeline-content-inner {
+    background: rgba(26,35,126,0.03); border: 1px solid rgba(26,35,126,0.12);
+    border-radius: 8px; padding: 24px 32px;
+    transition: all .3s;
+  }
+  .timeline-content:hover .timeline-content-inner { box-shadow: 0 12px 30px rgba(26,35,126,0.08); transform: translateY(-3px); background: rgba(26,35,126,0.05); }
+  .timeline-content h4 {
+    font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; 
+    color: var(--brand-indigo); margin-bottom: 6px; letter-spacing: 0.5px; line-height: 1.3;
+  }
+  .timeline-content p {
+    font-size: 15px; color: rgba(26,35,126,0.5); font-style: italic; line-height: 1.5;
+  }
+
+  /* ── TRANSPORT CARDS ── */
+  .transport-cards {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;
+  }
+  .transport-card {
+    background: #f5f6ff; border: 1px solid rgba(26,35,126,0.1);
+    border-radius: 10px; padding: 32px 24px; text-align: center;
+    transition: all .3s;
+  }
+  .transport-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(26,35,126,0.12); }
+  .transport-card-icon {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--brand-indigo); color: var(--brand-yellow);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; margin: 0 auto 16px;
+  }
+  .transport-card h4 {
+    font-family: 'Cinzel', serif; font-size: 16px; font-weight: 600;
+    color: var(--brand-indigo); margin-bottom: 10px;
+  }
+  .transport-card p {
+    font-size: 14px; color: rgba(13,23,87,0.65); line-height: 1.6;
+  }
+
+  /* ── THREE-COLUMN FOOTER ── */
+  .footer-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 40px;
+    max-width: 1100px; margin: 0 auto; text-align: left;
+    padding-bottom: 30px; border-bottom: 1px solid rgba(249,197,19,0.1);
+    margin-bottom: 20px;
+  }
+  .footer-col h4 {
+    font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 2px;
+    color: var(--gold); margin-bottom: 16px;
+  }
+  .footer-col p {
+    font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.7; margin-bottom: 8px;
+  }
+  .footer-col a {
+    display: block; font-size: 13px; color: rgba(255,255,255,0.35);
+    text-decoration: none; margin-bottom: 10px; transition: color .3s;
+  }
+  .footer-col a:hover { color: var(--gold); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .about-grid, .speaker-grid { grid-template-columns: 1fr; }
+    .testimonials-track { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-date-strip { flex-wrap: wrap; }
+    .sticky-cta-text { display: none; }
+    .transport-cards { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .timeline-item, .timeline-item:nth-child(even) { flex-direction: column; }
+    .timeline-time, .timeline-item:nth-child(even) .timeline-time {
+      text-align: center; padding: 0; margin-bottom: 8px;
+    }
+    .timeline-content, .timeline-item:nth-child(even) .timeline-content {
+      text-align: center; padding: 16px 20px;
+    }
+    .schedule-timeline::before { display: none; }
+    .timeline-dot { display: none; }
+  }
+
+  /* ── EVENT BANNER IMAGE ── */
+  .event-banner-wrap {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+    border-top: 3px solid var(--brand-yellow);
+    border-bottom: 3px solid var(--brand-yellow);
+    overflow: hidden;
+    background: var(--indigo-deep);
+  }
+  .event-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 85vh;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .event-banner-glow {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 120px;
+    background: linear-gradient(to top, rgba(13,23,87,0.55), transparent);
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-emblem om-symbol">ॐ</div>
+    <div class="nav-title">BGSM · Braj Gopika Seva Mission</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About the Pravachan</a></li>
+    <li><a href="#why-listen">Why Listen</a></li>
+    <li><a href="#speaker">Preacher</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#venue">Venue</a></li>
+  </ul>
+  <a href="#register" class="nav-register">Register Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-photo-layer" style="position:absolute;inset:0;z-index:0;overflow:hidden;">
+    <img src="https://static.wixstatic.com/media/1c6c5e_b24bae7102b64636976af63c8719e72d~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/BVU_0297%20(1)%20(1)_JPG.jpg" 
+         alt="Gyanrahasya Pravachan Event" 
+         style="width:100%;height:100%;object-fit:cover;opacity:0.12;filter:blur(2px) saturate(0.5);">
+  </div>
+  <div class="hero-mandala">
+    <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="400" cy="400" r="390" fill="none" stroke="#f9c513" stroke-width="1"/>
+      <circle cx="400" cy="400" r="320" fill="none" stroke="#f9c513" stroke-width="0.5"/>
+      <circle cx="400" cy="400" r="250" fill="none" stroke="#f9c513" stroke-width="1"/>
+      <circle cx="400" cy="400" r="180" fill="none" stroke="#f9c513" stroke-width="0.5"/>
+      <circle cx="400" cy="400" r="110" fill="none" stroke="#f9c513" stroke-width="1"/>
+      <!-- 8 petals -->
+      <g stroke="#f9c513" stroke-width="0.5" fill="none">
+        <ellipse cx="400" cy="230" rx="30" ry="70" transform="rotate(0 400 400)"/>
+        <ellipse cx="400" cy="230" rx="30" ry="70" transform="rotate(45 400 400)"/>
+        <ellipse cx="400" cy="230" rx="30" ry="70" transform="rotate(90 400 400)"/>
+        <ellipse cx="400" cy="230" rx="30" ry="70" transform="rotate(135 400 400)"/>
+        <ellipse cx="400" cy="230" rx="30" ry="70" transform="rotate(180 400 400)"/>
+        <ellipse cx="400" cy="230" rx="30" ry="70" transform="rotate(225 400 400)"/>
+        <ellipse cx="400" cy="230" rx="30" ry="70" transform="rotate(270 400 400)"/>
+        <ellipse cx="400" cy="230" rx="30" ry="70" transform="rotate(315 400 400)"/>
+      </g>
+      <!-- Spoke lines -->
+      <g stroke="#f9c513" stroke-width="0.3" opacity="0.6">
+        <line x1="400" y1="10" x2="400" y2="790"/>
+        <line x1="10" y1="400" x2="790" y2="400"/>
+        <line x1="96" y1="96" x2="704" y2="704"/>
+        <line x1="704" y1="96" x2="96" y2="704"/>
+      </g>
+    </svg>
+  </div>
+  <div class="lotus-scatter" id="lotusScatter"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span></span> Pancham Ved · Gyanrahasya · Udaipur <span></span>
+    </div>
+    <p class="hero-devanagari">श्रीमद् भागवत महापुराण</p>
+    <h1 class="hero-title">Shrimad Bhagwat<br>Mahapuran Gyanrahasya</h1>
+    <p class="hero-title-sub">Pancham Ved · Gyanrahasya · Udaipur</p>
+    <div class="hero-divider">
+      <hr><span class="hero-divider-lotus">❋</span><hr>
+    </div>
+    <p class="hero-speaker">
+      In the sacred voice of<br>
+      <strong>H.H. Raseshwari Devi Ji</strong>
+    </p>
+    <p class="hero-org">BRAJ GOPIKA SEVA MISSION</p>
+    <div class="hero-date-strip">
+      <div class="hero-date-item">
+        <span class="hero-date-label">DATES</span>
+        <span class="hero-date-value">17 – 25 May 2025</span>
+      </div>
+      <div class="hero-date-item">
+        <span class="hero-date-label">VENUE</span>
+        <span class="hero-date-value">Aashish Vatika, Hiran Magri, Sector 13, Udaipur</span>
+      </div>
+      <div class="hero-date-item">
+        <span class="hero-date-label">TIMING</span>
+        <span class="hero-date-value">6:30 – 8:30 PM</span>
+      </div>
+      <div class="hero-date-item">
+        <span class="hero-date-label">DURATION</span>
+        <span class="hero-date-value">9 Sacred Days</span>
+      </div>
+    </div>
+    <div class="hero-ctas">
+      <a href="#register" class="btn-primary">Register Your Seat</a>
+      <a href="#about" class="btn-outline">Know More</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-hint-bar"></div>
+    SCROLL
+  </div>
+</section>
+
+<!-- EVENT BANNER IMAGE -->
+<div class="event-banner-wrap">
+  <img src="pics/UDAIPUR BHAGWAT.png" alt="Shrimad Bhagwat Mahapuran Gyanrahasya – Udaipur Event Banner" class="event-banner-img">
+  <div class="event-banner-glow"></div>
+</div>
+
+<!-- ABOUT PRAVACHAN -->
+<section id="about">
+  <div class="section-container">
+    <p class="section-eyebrow">ABOUT THE PRAVACHAN</p>
+    <h2 class="section-heading">The Crown Jewel of <span style="color:var(--saffron);">All Scriptures</span></h2>
+    <p class="section-sub">Composed by Veda Vyasa &mdash; the essence of all Brahma Sutras &amp; Upanishads, revered as the Fifth Veda</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <h3>Importance of Shrimad Bhagwat Mahapuran</h3>
+        <p>Shrimad Bhagwatam by <strong>Veda Vyasa</strong> is considered the crown jewel among all scriptures. As declared in the Garuda Purana: <em>&ldquo;arth&omacr;'ya&dot;m brahma-s&umacr;tr&amacr;&dot;n&amacr;m&hellip; &sacute;r&imacr;mad-bh&amacr;gavat&amacr;bhidha&dot;h&rdquo;</em> &mdash; Shrimad Bhagwatam encapsulates the essence of all Brahma Sutras and Upanishads. It is the <strong>Panchama Veda &mdash; the Fifth Veda</strong>.</p>
+        <p>Veda Vyasa declares: <em>nimna-g&amacr;n&amacr;&dot;m yath&amacr; ga&ndot;g&amacr; / dev&amacr;n&amacr;m acyuto yath&amacr; / vai&scaron;&dot;nav&amacr;n&amacr;&dot;m yath&amacr; &sacute;ambhu&dot;h / pur&amacr;&dot;n&amacr;n&amacr;m ida&dot;m tath&amacr;</em> &mdash; Just as the Ganga is greatest among rivers, Lord Acyuta supreme among deities, and Lord Sambhu greatest of Vaishnavas, so Shrimad Bhagwatam is the greatest of all Puranas.</p>
+        <p><strong>Pujaniya Raseshwari Devi Ji</strong>, one of India's most prominent spiritual leaders, will reveal the secrets of this Shrimad Bhagwatam in Udaipur in a <strong>9-day discourse from 17th to 25th May</strong>.</p>
+        <!-- Stat Boxes -->
+        <div class="about-stats-grid">
+          <div class="about-stat-box">
+            <div class="about-stat-box-value">9</div>
+            <div class="about-stat-box-label">Days of Discourse</div>
+          </div>
+          <div class="about-stat-box">
+            <div class="about-stat-box-value">1000+</div>
+            <div class="about-stat-box-label">Expected Devotees</div>
+          </div>
+          <div class="about-stat-box">
+            <div class="about-stat-box-value">18,000</div>
+            <div class="about-stat-box-label">Verses of Pure Bhakti</div>
+          </div>
+          <div class="about-stat-box">
+            <div class="about-stat-box-value">&infin;</div>
+            <div class="about-stat-box-label">Divine Experience</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-panel">
+        <h3 style="font-family:'Cinzel',serif;font-size:20px;font-weight:600;margin-bottom:20px;color:#ffffff;">Event Highlights</h3>
+        <div class="about-highlight">
+          <span class="highlight-check">✓</span>
+          <span>Daily Bhagwat Pravachan by Raseshwari Devi Ji</span>
+        </div>
+        <div class="about-highlight">
+          <span class="highlight-check">✓</span>
+          <span>Kalash Yatra (1st day opening ceremony)</span>
+        </div>
+        <div class="about-highlight">
+          <span class="highlight-check">✓</span>
+          <span>Sacred Kirtan</span>
+        </div>
+        <div class="about-highlight">
+          <span class="highlight-check">✓</span>
+          <span>Maha Aarti</span>
+        </div>
+        <div class="about-highlight">
+          <span class="highlight-check">✓</span>
+          <span>Special Discourse on Gyanrahasya</span>
+        </div>
+        <div class="about-highlight">
+          <span class="highlight-check">✓</span>
+          <span>Special Leela</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKER / KATHAVACHAK -->
+<section id="speaker">
+  <div class="section-container">
+    <p class="section-eyebrow">Preacher</p>
+    <h2 class="section-heading">Pujaniya Raseshwari Devi Ji</h2>
+    <p class="section-sub">A senior preacher of Jagadguru Swami Shri Kripalu Ji Maharaj &mdash; whose compassionate heart overflows with Shri Krishna bhakti</p>
+    <div class="speaker-grid">
+      <div class="speaker-portrait">
+        <div class="speaker-img-frame">
+          <img 
+            src="https://static.wixstatic.com/media/67c604_e78f4f0fde704ee186eb595c4c8c7816~mv2.png/v1/fill/w_715,h_657,al_c,q_90,enc_avif,quality_auto/Maa_edited_edited.png"
+            alt="H.H. Raseshwari Devi Ji"
+            class="speaker-real-img"
+          >
+          <div class="speaker-gold-accent"></div>
+        </div>
+        <div class="speaker-name-card">
+          <div class="speaker-title-devanagari">रासेश्वरी देवी जी</div>
+          <div class="speaker-title-roman">RASESHWARI DEVI JI</div>
+        </div>
+      </div>
+      <div class="speaker-info">
+        <h2>Pujaniya<br>Raseshwari Devi Ji</h2>
+        <p class="speaker-epithet">"भक्ति की शीतल किरण पूँज" — The Soothing Rays of Bhakti</p>
+        <p>Pujaniya Raseshwari Devi Ji is one of India's most prominent spiritual leaders and a senior preacher of <strong>Bhaktiyog Rasavatar Jagadguru Swami Shri Kripalu Ji Maharaj</strong> — the greatest authority on devotion in this age, who emphatically taught that without bhakti, all paths of karma, jñāna and yoga become fruitless.</p>
+        <p>From childhood itself, Shri Maharaj Ji blessed her with his divine association, nurtured her heart with the nectar of bhakti, and moulded her into a <strong>Mahabhagavat personality</strong>, dedicating her entirely to the welfare of the world. <em>If Shri Maharaj Ji is the sun of bhakti, Pujaniya Devi Ji is its soothing, cooling rays.</em></p>
+        <p>For over <strong>three decades</strong>, Pujaniya Devi Ji has been propagating Shri Krishna bhakti across India and abroad. Her Bhagwat discourse is not an ordinary recitation — it is a soul-level offering made before the Lord, born of compassion for souls afflicted by the impurities of Kali Yuga, aimed at immersing weary hearts in the colour of divine love for Shri Krishna.</p>
+        <div class="speaker-tags">
+          <span class="speaker-tag">Disciple of Kripalu Ji Maharaj</span>
+          <span class="speaker-tag">Senior Pravachankarta</span>
+          <span class="speaker-tag">35+ Years of Global Seva</span>
+          <span class="speaker-tag">Mahabhagavat</span>
+          <span class="speaker-tag">BGSM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY LISTEN TO BHAGAVAT -->
+<section id="why-listen" style="background:linear-gradient(135deg,#0d1757 0%,#1a237e 50%,#0d1757 100%);">
+  <div class="section-container">
+    <p class="section-eyebrow">WHY LISTEN</p>
+    <h2 class="section-heading">Why Should One Listen to <span style="color:var(--gold);">this Bhagavat</span></h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.65);">&ldquo;श्रवणं सर्वधर्मेभ्यो वरं मन्ये तपोधनाः।॥&rdquo; &mdash; Narada Ji declares: listening to the Bhagavat is superior to all other forms of dharma.</p>
+     <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;">
+      <div>
+        <p style="font-size:17px;line-height:1.9;color:rgba(255,255,255,0.78);margin-bottom:18px;">In this age, <strong style="color:var(--gold);">Jagadguru Swami Shri Kripalu Ji Maharaj</strong>, the greatest authority on devotion, repeatedly emphasised that without bhakti, all paths &mdash; karma, jñāna and yoga &mdash; become fruitless.</p>
+        <p style="font-size:17px;line-height:1.9;color:rgba(255,255,255,0.78);margin-bottom:18px;">Shrimad Bhagavat Mahapurana, being the divine voice of God and illuminated with the devotional lives of the greatest saints, infuses the <strong style="color:var(--gold);">Nectar of Bhakti</strong> into the heart of the listener. It is the life-restoring elixir for seekers and instantly draws the soul closer to the Supreme Lord.</p>
+        <p style="font-size:17px;line-height:1.9;color:rgba(255,255,255,0.78);margin-bottom:24px;">When the divinity of the speaker, the austerity and surrender of the yajman, and the pure devotion of the listeners come together, the <strong style="color:var(--gold);">entire atmosphere becomes charged with spiritual power</strong>.</p>
+        <div style="font-family:'Noto Sans Devanagari',sans-serif;font-size:16px;color:var(--gold-soft);line-height:2.4;margin-bottom:12px;text-align:left;">वासुदेव परं ज्ञानं | वासुदेव परं तपः<br>वासुदेव परो धर्मो | वासुदेव परा गतिः</div>
+        <p style="font-size:14px;font-style:italic;color:rgba(255,255,255,0.55);">(Bhāg. 1.2.29) &mdash; Vasudeva is the supreme knowledge, supreme austerity, supreme dharma and supreme refuge for all beings.</p>
+      </div>
+      <div style="background:rgba(249,197,19,0.07);border:1px solid rgba(249,197,19,0.2);border-radius:10px;padding:32px;">
+        <img src="pics/vasudeva_divine.png" alt="Lord Vasudeva – Divine Illustration" style="width:100%;border-radius:8px;border:2px solid rgba(249,197,19,0.25);display:block;">
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;">
+      <div style="background:rgba(249,197,19,0.07);border:1px solid rgba(249,197,19,0.2);border-top:3px solid var(--gold);border-radius:10px;padding:28px 24px;transition:all .3s;">
+        <div style="font-size:32px;margin-bottom:14px;">🙏</div>
+        <h4 style="font-family:'Cinzel',serif;font-size:16px;color:var(--gold);margin-bottom:10px;font-weight:600;">Bliss, Longevity &amp; Purushartha</h4>
+        <p style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">Hearing it daily with devotion bestows bliss, longevity, strength, and all four Purusharthas &mdash; Dharma, Artha, Kama and Moksha.</p>
+      </div>
+      <div style="background:rgba(249,197,19,0.07);border:1px solid rgba(249,197,19,0.2);border-top:3px solid var(--gold);border-radius:10px;padding:28px 24px;transition:all .3s;">
+        <div style="font-size:32px;margin-bottom:14px;">🛡️</div>
+        <h4 style="font-family:'Cinzel',serif;font-size:16px;color:var(--gold);margin-bottom:10px;font-weight:600;">Forever Under the Lord's Protection</h4>
+        <p style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">&ldquo;The one who narrates, listens, or rejoices in My divine pastimes is never forsaken by Me.&rdquo; &mdash; Such a devotee forever remains under the Lord's protection.</p>
+      </div>
+      <div style="background:rgba(249,197,19,0.07);border:1px solid rgba(249,197,19,0.2);border-top:3px solid var(--gold);border-radius:10px;padding:28px 24px;transition:all .3s;">
+        <div style="font-size:32px;margin-bottom:14px;">🐄</div>
+        <h4 style="font-family:'Cinzel',serif;font-size:16px;color:var(--gold);margin-bottom:10px;font-weight:600;">The Lord's Presence Descends</h4>
+        <p style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">&ldquo;Wherever the Bhagavat is recited, I personally go &mdash; just as a cow follows her calf.&rdquo; The Lord's presence naturally descends where this scripture is heard.</p>
+      </div>
+      <div style="background:rgba(249,197,19,0.07);border:1px solid rgba(249,197,19,0.2);border-top:3px solid var(--gold);border-radius:10px;padding:28px 24px;transition:all .3s;">
+        <div style="font-size:32px;margin-bottom:14px;">🏔️</div>
+        <h4 style="font-family:'Cinzel',serif;font-size:16px;color:var(--gold);margin-bottom:10px;font-weight:600;">Deeper Than Any Pilgrimage</h4>
+        <p style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">No pilgrimage or sacred bath purifies as deeply as listening to Shrimad Bhagavat. Its grace cleanses the heart at the very root.</p>
+      </div>
+      <div style="background:rgba(249,197,19,0.07);border:1px solid rgba(249,197,19,0.2);border-top:3px solid var(--gold);border-radius:10px;padding:28px 24px;transition:all .3s;">
+        <div style="font-size:32px;margin-bottom:14px;">🌟</div>
+        <h4 style="font-family:'Cinzel',serif;font-size:16px;color:var(--gold);margin-bottom:10px;font-weight:600;">Restores Inner Strength for Today's Youth</h4>
+        <p style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">In today's age of anxiety and conflict, the Bhagavat restores inner strength. Its teachings uplift the youth, bringing clarity, confidence, and balance.</p>
+      </div>
+      <div style="background:rgba(249,197,19,0.07);border:1px solid rgba(249,197,19,0.2);border-top:3px solid var(--gold);border-radius:10px;padding:28px 24px;transition:all .3s;">
+        <div style="font-size:32px;margin-bottom:14px;">🌿</div>
+        <h4 style="font-family:'Cinzel',serif;font-size:16px;color:var(--gold);margin-bottom:10px;font-weight:600;">Compassion for All Beings</h4>
+        <p style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7;">The Bhagavat awakens compassion and sensitivity toward all beings &mdash; animate and inanimate. It inspires ecological awareness and harmony with creation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT MAKES THIS UNIQUE -->
+<section id="unique" style="background:var(--brand-yellow);">
+  <div class="section-container">
+    <p class="section-eyebrow" style="color:var(--brand-indigo);">WHAT MAKES THIS UNIQUE</p>
+    <h2 class="section-heading" style="color:var(--brand-indigo);">In What Way This <span style="color:var(--brand-indigo);">Bhāgavat Is Unique</span></h2>
+    <p class="section-sub" style="color:rgba(13,23,87,0.75);">This is not an ordinary recitation &mdash; it is a supreme act of benevolence offered by an exceedingly gracious heart for the welfare of all souls</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;">
+      <div>
+        <p style="font-size:17px;line-height:1.9;color:rgba(13,23,87,0.82);margin-bottom:18px;">The Śrīmad Bhāgavatam is neither a historical chronicle nor a collection of mythological episodes; it is the <strong>nectar-filled, living form of devotion in scripture</strong> &mdash; revealed solely to infuse the parched hearts of beings in the age of Kali with the divine essence of bhakti.</p>
+        <p style="font-size:17px;line-height:1.9;color:rgba(13,23,87,0.82);margin-bottom:18px;">Yet, it is often seen that traditional Bhāgavat kathā events become confined to ritualistic formalities or reduced to mere entertainment, thereby failing to fulfil their sacred purpose.</p>
+        <p style="font-size:17px;line-height:1.9;color:rgba(13,23,87,0.82);">The inspiration behind this particular event is the heartfelt desire to spread <strong>Śrī Kṛṣṇa-bhakti</strong> across India and abroad. This kathā is an intimate, soul-level offering made before the Lord by a saintly heart overflowing with compassion for beings afflicted by the impurities of Kali Yuga.</p>
+      </div>
+      <div style="background:rgba(26,35,126,0.08);border:1px solid rgba(26,35,126,0.2);border-radius:10px;padding:36px;">
+        <div style="font-family:'Cinzel',serif;font-size:13px;letter-spacing:2px;color:var(--brand-indigo);margin-bottom:20px;font-weight:600;">THREE PILLARS OF THIS UNIQUE KATHĀ</div>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:40px;height:40px;background:var(--brand-indigo);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🕊️</div>
+            <div><strong style="font-family:'Cinzel',serif;font-size:14px;color:var(--brand-indigo);">Divinity of the Speaker</strong><p style="font-size:14px;color:rgba(13,23,87,0.7);margin-top:4px;line-height:1.6;">A Mahabhagavat in the lineage of Jagadguru Kripalu Ji Maharaj &mdash; equal to Shukadeva Muni in qualification.</p></div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:40px;height:40px;background:var(--brand-indigo);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🙏</div>
+            <div><strong style="font-family:'Cinzel',serif;font-size:14px;color:var(--brand-indigo);">Purpose: Spread Shri Krishna Bhakti</strong><p style="font-size:14px;color:rgba(13,23,87,0.7);margin-top:4px;line-height:1.6;">To immerse weary, mechanised hearts in the colour of divine love for Shri Krishna &mdash; across India and the world.</p></div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:40px;height:40px;background:var(--brand-indigo);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">💛</div>
+            <div><strong style="font-family:'Cinzel',serif;font-size:14px;color:var(--brand-indigo);">A Supreme Act of Benevolence</strong><p style="font-size:14px;color:rgba(13,23,87,0.7);margin-top:4px;line-height:1.6;">Not an ordinary recitation &mdash; a mahadāna (great gift) offered by an exceedingly compassionate heart for the welfare of all souls.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+  <div class="section-container">
+    <p class="section-eyebrow">PROGRAM SCHEDULE</p>
+    <h2 class="section-heading">9-Day <span style="color:var(--saffron);">Divine Itinerary</span></h2>
+    <p class="section-sub">17th &ndash; 25th May 2025 &mdash; Each day unfolds a new chapter of spiritual wisdom, devotion, and divine celebration</p>
+    <!-- Day Tabs -->
+    <div class="schedule-tabs">
+      <button class="schedule-tab active" onclick="showDay(1)">1<span>May 17</span></button>
+      <button class="schedule-tab" onclick="showDay(2)">2<span>May 18</span></button>
+      <button class="schedule-tab" onclick="showDay(3)">3<span>May 19</span></button>
+      <button class="schedule-tab" onclick="showDay(4)">4<span>May 20</span></button>
+      <button class="schedule-tab" onclick="showDay(5)">5<span>May 21</span></button>
+      <button class="schedule-tab" onclick="showDay(6)">6<span>May 22</span></button>
+      <button class="schedule-tab" onclick="showDay(7)">7<span>May 23</span></button>
+      <button class="schedule-tab" onclick="showDay(8)">8<span>May 24</span></button>
+      <button class="schedule-tab" onclick="showDay(9)">9<span>May 25</span></button>
+    </div>
+    <!-- Day 1 -->
+    <div class="schedule-day-panel" id="day-1">
+      <div class="schedule-day-title">
+        <h3>Day 1</h3>
+        <p>Divine Discourse by Raseshwari Devi Ji</p>
+      </div>
+      <div class="schedule-timeline">
+        <div class="timeline-item" style="animation-delay:0s"><div class="timeline-time">06:30 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Mangalacharan</h4><p>Sacred Invocation</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.1s"><div class="timeline-time">06:45 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Shrimad Bhagwat Mahapuran Pravachan</h4><p>The Quest for Profit and Internal Awakening</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.2s"><div class="timeline-time">08:15 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Aarti</h4><p>Evening Conclusion</p></div></div></div>
+      </div>
+    </div>
+    <!-- Day 2 -->
+    <div class="schedule-day-panel" id="day-2" style="display:none;">
+      <div class="schedule-day-title">
+        <h3>Day 2</h3>
+        <p>Divine Discourse by Raseshwari Devi Ji</p>
+      </div>
+      <div class="schedule-timeline">
+        <div class="timeline-item" style="animation-delay:0s"><div class="timeline-time">06:30 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Mangalacharan</h4><p>Sacred Invocation</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.1s"><div class="timeline-time">06:45 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Shrimad Bhagwat Mahapuran Pravachan</h4><p>Authentication — Myth vs. Reality</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.2s"><div class="timeline-time">08:15 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Aarti</h4><p>Evening Conclusion</p></div></div></div>
+      </div>
+    </div>
+    <!-- Day 3 -->
+    <div class="schedule-day-panel" id="day-3" style="display:none;">
+      <div class="schedule-day-title">
+        <h3>Day 3</h3>
+        <p>Divine Discourse by Raseshwari Devi Ji</p>
+      </div>
+      <div class="schedule-timeline">
+        <div class="timeline-item" style="animation-delay:0s"><div class="timeline-time">06:30 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Mangalacharan</h4><p>Sacred Invocation</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.1s"><div class="timeline-time">06:45 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Shrimad Bhagwat Mahapuran Pravachan</h4><p>Shravan Vidhi — The Methodology of Listening</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.2s"><div class="timeline-time">08:15 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Aarti</h4><p>Evening Conclusion</p></div></div></div>
+      </div>
+    </div>
+    <!-- Day 4 -->
+    <div class="schedule-day-panel" id="day-4" style="display:none;">
+      <div class="schedule-day-title">
+        <h3>Day 4</h3>
+        <p>Divine Discourse by Raseshwari Devi Ji</p>
+      </div>
+      <div class="schedule-timeline">
+        <div class="timeline-item" style="animation-delay:0s"><div class="timeline-time">06:30 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Mangalacharan</h4><p>Sacred Invocation</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.1s"><div class="timeline-time">06:45 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Shrimad Bhagwat Mahapuran Pravachan</h4><p>The Art of Inquiry and the Role of the Guru</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.2s"><div class="timeline-time">08:15 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Aarti</h4><p>Evening Conclusion</p></div></div></div>
+      </div>
+    </div>
+    <!-- Day 5 -->
+    <div class="schedule-day-panel" id="day-5" style="display:none;">
+      <div class="schedule-day-title">
+        <h3>Day 5</h3>
+        <p>Divine Discourse by Raseshwari Devi Ji</p>
+      </div>
+      <div class="schedule-timeline">
+        <div class="timeline-item" style="animation-delay:0s"><div class="timeline-time">06:30 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Mangalacharan</h4><p>Sacred Invocation</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.1s"><div class="timeline-time">06:45 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Shrimad Bhagwat Mahapuran Pravachan</h4><p>The Supreme Gift — Value of Kathamrit over Amrit</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.2s"><div class="timeline-time">08:15 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Aarti</h4><p>Evening Conclusion</p></div></div></div>
+      </div>
+    </div>
+    <!-- Day 6 -->
+    <div class="schedule-day-panel" id="day-6" style="display:none;">
+      <div class="schedule-day-title">
+        <h3>Day 6</h3>
+        <p>Divine Discourse by Raseshwari Devi Ji</p>
+      </div>
+      <div class="schedule-timeline">
+        <div class="timeline-item" style="animation-delay:0s"><div class="timeline-time">06:30 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Mangalacharan</h4><p>Sacred Invocation</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.1s"><div class="timeline-time">06:45 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Shrimad Bhagwat Mahapuran Pravachan</h4><p>Understanding and Overcoming the Fear of Death</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.2s"><div class="timeline-time">08:15 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Aarti</h4><p>Evening Conclusion</p></div></div></div>
+      </div>
+    </div>
+    <!-- Day 7 -->
+    <div class="schedule-day-panel" id="day-7" style="display:none;">
+      <div class="schedule-day-title">
+        <h3>Day 7</h3>
+        <p>Divine Discourse by Raseshwari Devi Ji</p>
+      </div>
+      <div class="schedule-timeline">
+        <div class="timeline-item" style="animation-delay:0s"><div class="timeline-time">06:30 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Mangalacharan</h4><p>Sacred Invocation</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.1s"><div class="timeline-time">06:45 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Shrimad Bhagwat Mahapuran Pravachan</h4><p>The Three Tapa — Identifying the Sources of Suffering</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.2s"><div class="timeline-time">08:15 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Aarti</h4><p>Evening Conclusion</p></div></div></div>
+      </div>
+    </div>
+    <!-- Day 8 -->
+    <div class="schedule-day-panel" id="day-8" style="display:none;">
+      <div class="schedule-day-title">
+        <h3>Day 8</h3>
+        <p>Divine Discourse by Raseshwari Devi Ji</p>
+      </div>
+      <div class="schedule-timeline">
+        <div class="timeline-item" style="animation-delay:0s"><div class="timeline-time">06:30 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Mangalacharan</h4><p>Sacred Invocation</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.1s"><div class="timeline-time">06:45 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Shrimad Bhagwat Mahapuran Pravachan</h4><p>Sachchidananda — Exploring our Divine Identity</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.2s"><div class="timeline-time">08:15 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Aarti</h4><p>Evening Conclusion</p></div></div></div>
+      </div>
+    </div>
+    <!-- Day 9 -->
+    <div class="schedule-day-panel" id="day-9" style="display:none;">
+      <div class="schedule-day-title">
+        <h3>Day 9</h3>
+        <p>Divine Discourse by Raseshwari Devi Ji</p>
+      </div>
+      <div class="schedule-timeline">
+        <div class="timeline-item" style="animation-delay:0s"><div class="timeline-time">06:30 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Mangalacharan</h4><p>Sacred Invocation</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.1s"><div class="timeline-time">06:45 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Shrimad Bhagwat Mahapuran Pravachan</h4><p>The Role of God and the Ultimate Grace of Radha</p></div></div></div>
+        <div class="timeline-item" style="animation-delay:0.2s"><div class="timeline-time">08:15 PM</div><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-content-inner"><h4>Aarti</h4><p>Evening Conclusion</p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SNEAK PEEK VIDEOS -->
+<section id="videos">
+  <div class="section-container">
+    <p class="section-eyebrow">SNEAK PEEK</p>
+    <h2 class="section-heading">Experience the <span style="color:var(--gold-soft);">Divine Moments</span></h2>
+    <p class="section-sub">Watch previews and highlights from this sacred spiritual journey</p>
+    <div class="video-grid">
+      <div class="video-card" onclick="openModal('video1')">
+        <div class="video-thumb">
+          <div class="video-thumb-bg"></div>
+          <div class="video-thumb-pattern"></div>
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="video-thumb-label">EXCERPT · JANMASHTAMI</div>
+        </div>
+        <div class="video-info">
+          <div class="video-title">Why do we celebrate Janmashtami?</div>
+          <div class="video-desc">Pujaniya Raseshwari Devi Ji reveals the profound spiritual significance of Lord Krishna's divine appearance — why Janmashtami is not merely a birthday, but the descent of eternal love into this world.</div>
+        </div>
+      </div>
+      <div class="video-card" onclick="openModal('video2')">
+        <div class="video-thumb">
+          <div class="video-thumb-bg"></div>
+          <div class="video-thumb-pattern"></div>
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="video-thumb-label">EXCERPT · BHAKTI MARG</div>
+        </div>
+        <div class="video-info">
+          <div class="video-title">A Wonderful Path?</div>
+          <div class="video-desc">Devi Ji illuminates the path of Bhakti as the most accessible, joyful and powerful route to God — and why the great saints chose it above all other paths of sadhana.</div>
+        </div>
+      </div>
+      <div class="video-card" onclick="openModal('video3')">
+        <div class="video-thumb">
+          <div class="video-thumb-bg"></div>
+          <div class="video-thumb-pattern"></div>
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="video-thumb-label">EXCERPT · DIVINE LOVE</div>
+        </div>
+        <div class="video-info">
+          <div class="video-title">How to become Krishna's beloved? | 3 rules to get divine love</div>
+          <div class="video-desc">A soul-stirring discourse on the three timeless principles through which the soul draws closest to Shri Krishna — and how divine love is not earned but surrendered into.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section id="gallery" style="background:#f5f6ff;padding:80px 24px;">
+  <div class="section-container">
+    <p class="section-eyebrow" style="color:var(--brand-indigo);">GLIMPSES</p>
+    <h2 class="section-heading" style="color:var(--brand-indigo);">Divine Moments from Past Gyanrahasya Pravachans</h2>
+    <p class="section-sub" style="color:rgba(26,35,126,0.7);">A glimpse into the sacred atmosphere that awaits you in Udaipur</p>
+    <div class="gallery-wrapper">
+      <button class="slider-btn prev-btn" onclick="scrollGallery(-1)">❮</button>
+      <div class="gallery-slider" id="gallerySlider">
+        <div class="gallery-item">
+          <img src="https://static.wixstatic.com/media/1c6c5e_b24bae7102b64636976af63c8719e72d~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/BVU_0297%20(1)%20(1)_JPG.jpg" alt="Gyanrahasya Satsang gathering">
+          <div class="gallery-label" style="color:#f9c513;">SATSANG GATHERING</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://static.wixstatic.com/media/1c6c5e_d1b5f2ad1ec74b70a60097edcc442307~mv2.jpg/v1/fill/w_305,h_229,fp_0.50_0.50,q_90,enc_avif,quality_auto/1c6c5e_d1b5f2ad1ec74b70a60097edcc442307~mv2.webp" alt="Upanishadic Gyanamrit">
+          <div class="gallery-label">UPANISHADIC DISCOURSE</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://static.wixstatic.com/media/1c6c5e_83319808255e43e682d183c005b0845f~mv2.jpg/v1/fill/w_306,h_229,fp_0.50_0.50,q_90,enc_avif,quality_auto/1c6c5e_83319808255e43e682d183c005b0845f~mv2.webp" alt="Gyanrahasya Pravachan UK">
+          <div class="gallery-label">GYANRAHASYA PRAVACHAN — UK</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://static.wixstatic.com/media/1c6c5e_a0c5926dadf24e489290de41bed17f2f~mv2.jpg/v1/fill/w_305,h_229,fp_0.50_0.50,q_90,enc_avif,quality_auto/1c6c5e_a0c5926dadf24e489290de41bed17f2f~mv2.webp" alt="Sadhana Shivir Ayodhya">
+          <div class="gallery-label">SADHANA SHIVIR — AYODHYA</div>
+        </div>
+      </div>
+      <button class="slider-btn next-btn" onclick="scrollGallery(1)">❯</button>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://www.raseshwarideviji.org/events" target="_blank" 
+         style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;color:var(--brand-indigo);text-decoration:none;border-bottom:1px solid rgba(26,35,126,0.3);padding-bottom:2px;">
+        View All Past Events on raseshwarideviji.org →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-container">
+    <p class="section-eyebrow">TESTIMONIALS</p>
+    <h2 class="section-heading">Voices of <span style="color:var(--saffron);">Devotion</span></h2>
+    <p class="section-sub">Voices of devotees transformed by Raseshwari Devi Ji's sacred Gyanrahasya Pravachan</p>
+    <div class="testimonials-track">
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Sitting in Raseshwari Devi Ji's Gyanrahasya Pravachan felt like receiving a direct transmission from Vrindavan itself. I came with a troubled heart and left with complete peace. The Bhagwatam truly lives in her voice."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div>
+            <div class="testimonial-author-name">Sarojini Panda</div>
+            <div class="testimonial-author-loc">BHUBANESWAR, ODISHA</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"I have attended many Pravachans in my life, but nothing has touched my atma the way Mataji's narration does. When she speaks of Krishna's leelas, you don't listen — you see. A truly transcendental experience."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">R</div>
+          <div>
+            <div class="testimonial-author-name">Ramesh Choudhary</div>
+            <div class="testimonial-author-loc">JAIPUR, RAJASTHAN</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Our entire family attended the 7-day Gyanrahasya Pravachan last year. My elderly mother, who had been unwell for months, recovered her vitality and joy. We attribute it entirely to the Lord's grace flowing through Mataji's words."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M</div>
+          <div>
+            <div class="testimonial-author-name">Meera Agarwal</div>
+            <div class="testimonial-author-loc">VARANASI, UP</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"As a young professional lost in the material world, the Gyanrahasya Pravachan reconnected me to what truly matters. Mataji's explanation of the Bhagwatam's philosophy is clear, deep, and completely relevant to modern life."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">A</div>
+          <div>
+            <div class="testimonial-author-name">Abhishek Sharma</div>
+            <div class="testimonial-author-loc">PUNE, MAHARASHTRA</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The prasad, the bhajans, the Gyanrahasya Pravachan — everything at BGSM is suffused with devotion and authenticity. Raseshwari Devi Ji's presence is itself a darshan. We travel from Delhi every year for this."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">P</div>
+          <div>
+            <div class="testimonial-author-name">Priya & Vikas Gupta</div>
+            <div class="testimonial-author-loc">NEW DELHI</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Listening to the Dashama Skandha from Mataji's lips, I wept through the entire session. Not from sadness — from indescribable joy. The Lord was truly present. I urge every soul to attend at least once in their lifetime."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">G</div>
+          <div>
+            <div class="testimonial-author-name">Geetanjali Mishra</div>
+            <div class="testimonial-author-loc">CUTTACK, ODISHA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUE & MAP -->
+<section id="venue">
+  <div class="section-container">
+    <p class="section-eyebrow">GETTING THERE</p>
+    <h2 class="section-heading">Your Journey to <span style="color:var(--saffron);">Udaipur</span></h2>
+    <p class="section-sub">The City of Lakes welcomes you. Here's how to reach the sacred venue.</p>
+    <!-- Transport Cards -->
+    <div class="transport-cards">
+      <div class="transport-card">
+        <div class="transport-card-icon">✈️</div>
+        <h4>By Air</h4>
+        <p>Maharana Pratap Airport (UDR) is well connected from Delhi, Mumbai, Jaipur and Kolkata. The venue is ~25 min from the airport in central Udaipur.</p>
+      </div>
+      <div class="transport-card">
+        <div class="transport-card-icon">🚂</div>
+        <h4>By Train</h4>
+        <p>Udaipur City Railway Station connects to major cities: Ahmedabad, Jaipur, Delhi, Ajmer, Udaipur Express (Delhi) and Mewar Express are popular routes.</p>
+      </div>
+      <div class="transport-card">
+        <div class="transport-card-icon">🚌</div>
+        <h4>By Road</h4>
+        <p>Udaipur is connected via NH-48 from Ahmedabad (~4 hrs), Jaipur (~6 hrs) and Mumbai (~11 hrs). RSRTC and private buses available.</p>
+      </div>
+    </div>
+    <!-- Venue Info -->
+    <div style="text-align:center;margin-bottom:32px;">
+      <div class="venue-location-type">PRAVACHAN VENUE · UDAIPUR, RAJASTHAN</div>
+      <h3 style="font-family:'Cinzel',serif;font-size:22px;font-weight:600;color:var(--brand-indigo);margin-bottom:6px;">Aashish Vatika</h3>
+      <p style="font-size:15px;color:rgba(26,35,126,0.7);">Hiran Magri, Sector 13, Udaipur, Rajasthan</p>
+    </div>
+    <!-- Map -->
+    <div class="map-frame" style="box-shadow:0 8px 40px rgba(26,35,126,0.12);border-color:rgba(26,35,126,0.15);">
+      <iframe
+        src="https://maps.google.com/maps?q=Aashish%20Vatika,%20Hiran%20Magri,%20Sector%2013,%20Udaipur&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+    <div style="text-align:center;margin-top:20px;">
+      <a href="https://maps.google.com/?q=Aashish+Vatika,+Hiran+Magri,+Sector+13,+Udaipur" target="_blank" style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;color:var(--brand-indigo);text-decoration:none;border-bottom:1px solid rgba(26,35,126,0.3);padding-bottom:2px;">
+        Open in Google Maps →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section id="register">
+  <div class="register-content">
+    <span class="register-om om-symbol">ॐ</span>
+    <h2>Reserve Your Seat in<br>This Sacred Gyanrahasya</h2>
+    <p>Registration is open to all — entry is free. Seats are limited. Secure your place in this divine satsang and receive updates on venue, schedule, and accommodation.</p>
+    <div class="register-form">
+
+      <button class="register-submit" onclick="handleRegister(event)">Register for Pancham Ved — Free Entry</button>
+    </div>
+    <p class="register-note">🌸 Prasad Seva will be offered daily. Accommodation assistance available on request.</p>
+    <div style="margin-top:40px; border-top:1px solid rgba(255,255,255,0.1); padding-top:24px;">
+      <h4 style="font-family:'Cinzel',serif;font-size:20px;color:var(--gold);margin-bottom:8px;">BGSM</h4>
+      <p style="font-size:14px;color:rgba(255,255,255,0.7);max-width:600px;margin:0 auto 12px;line-height:1.6;">Dedicated to spreading the divine wisdom of Shrimad Bhagwat Mahapuran and nurturing spiritual growth across communities.</p>
+      <p style="font-style:italic;color:rgba(255,255,255,0.4);font-size:14px;">"Sarve Bhavantu Sukhinah"</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- VIDEO MODAL -->
+<div class="modal-overlay" id="videoModal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('videoModal').classList.remove('active')">✕</button>
+    <div class="modal-video" id="modalVideoContainer">
+      <p>[ Add your YouTube embed link here ]</p>
+    </div>
+    <div class="modal-info">
+      <div class="modal-title" id="modalTitle">Gyanrahasya Excerpt</div>
+      <div class="modal-description" id="modalDesc">A sacred excerpt from Raseshwari Devi Ji's Bhagwatam discourse.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Floating lotus petals
+  const scatter = document.getElementById('lotusScatter');
+  const symbols = ['🌸', '🪷', '❋', '✿', '❁'];
+  for (let i = 0; i < 20; i++) {
+    const s = document.createElement('span');
+    s.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    s.style.left = Math.random() * 100 + 'vw';
+    s.style.animationDuration = (18 + Math.random() * 20) + 's';
+    s.style.animationDelay = (Math.random() * 20) + 's';
+    s.style.fontSize = (12 + Math.random() * 14) + 'px';
+    scatter.appendChild(s);
+  }
+
+  // Intersection observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.about-stat-box, .about-highlight, .video-card, .testimonial-card, .transport-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+
+  // Schedule tab switching
+  function showDay(day) {
+    // Hide all panels
+    document.querySelectorAll('.schedule-day-panel').forEach(p => p.style.display = 'none');
+    // Deactivate all tabs
+    document.querySelectorAll('.schedule-tab').forEach(t => t.classList.remove('active'));
+    // Show selected panel
+    document.getElementById('day-' + day).style.display = 'block';
+    // Activate selected tab
+    document.querySelectorAll('.schedule-tab')[day - 1].classList.add('active');
+    // Re-trigger timeline animations
+    document.querySelectorAll('#day-' + day + ' .timeline-item').forEach(item => {
+      item.style.animation = 'none';
+      item.offsetHeight; // force reflow
+      item.style.animation = '';
+    });
+  }
+
+  // Video modal data
+  const videoData = {
+    video1: {
+      title: "Why do we celebrate Janmashtami?",
+      desc: "Pujaniya Raseshwari Devi Ji reveals the profound spiritual significance of Lord Krishna's divine appearance — why Janmashtami is not merely a birthday, but the descent of eternal love into this world.",
+      embedUrl: "https://www.youtube.com/embed/icVWiy5MoEE"
+    },
+    video2: {
+      title: "A Wonderful Path?",
+      desc: "Devi Ji illuminates the path of Bhakti as the most accessible, joyful and powerful route to God — and why the great saints chose it above all other paths of sadhana.",
+      embedUrl: "https://www.youtube.com/embed/-YsVrYQLpr4"
+    },
+    video3: {
+      title: "How to become Krishna's beloved? | 3 rules to get divine love",
+      desc: "A soul-stirring discourse on the three timeless principles through which the soul draws closest to Shri Krishna — and how divine love is not earned but surrendered into.",
+      embedUrl: "https://www.youtube.com/embed/kPBVGVX0BbE"
+    }
+  };
+
+  function openModal(id) {
+    const data = videoData[id];
+    document.getElementById('modalTitle').textContent = data.title;
+    document.getElementById('modalDesc').textContent = data.desc;
+    const container = document.getElementById('modalVideoContainer');
+    if (data.embedUrl) {
+      container.innerHTML = `<iframe src="${data.embedUrl}?autoplay=1" allowfullscreen allow="autoplay"></iframe>`;
+      container.style.height = '';
+    } else {
+      container.innerHTML = `<p style="padding:40px;text-align:center;">[ Paste your YouTube embed URL in the script to activate this video ]</p>`;
+    }
+    document.getElementById('videoModal').classList.add('active');
+  }
+
+  function closeModal(e) {
+    if (e.target === document.getElementById('videoModal')) {
+      document.getElementById('videoModal').classList.remove('active');
+      document.getElementById('modalVideoContainer').innerHTML = '';
+    }
+  }
+
+  function handleRegister(e) {
+    e.preventDefault();
+    const btn = e.target;
+    btn.textContent = '🌸 Radhey Radhey — Registered Successfully!';
+    btn.style.background = '#4caf50';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.textContent = 'Register for Pancham Ved — Free Entry';
+      btn.style.background = '';
+      btn.style.color = '';
+    }, 4000);
+  }
+
+  // Gallery slider logic
+  function scrollGallery(direction) {
+    const slider = document.getElementById('gallerySlider');
+    const scrollAmount = slider.offsetWidth * 0.7; // scroll 70% of the container width
+    slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
