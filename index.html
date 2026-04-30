@@ -612,7 +612,9 @@
   .slider-btn:hover { background: var(--gold); color: var(--brand-indigo); }
   .slider-btn.prev-btn { left: -16px; }
   .slider-btn.next-btn { right: -16px; }
+
   @media (max-width: 768px) {
+
     .slider-btn.prev-btn { left: 8px; }
     .slider-btn.next-btn { right: 8px; }
   }
@@ -991,9 +993,36 @@
   .footer-col a:hover { color: var(--gold); }
 
   /* ── RESPONSIVE ── */
+
+  .why-listen-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; }
+  .benefits-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px; }
+  .unique-grid { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start; }
   @media (max-width: 768px) {
+    .section-container { padding: 60px 20px; }
+    .why-listen-grid, .benefits-grid, .unique-grid, .venue-grid { grid-template-columns: 1fr; }
+    .hero { padding: 120px 20px 80px; }
+    .schedule-tabs { 
+      justify-content: flex-start; 
+      overflow-x: auto; 
+      white-space: nowrap; 
+      -webkit-overflow-scrolling: touch; 
+      padding-bottom: 10px;
+    }
+    .schedule-tab { flex: 0 0 auto; }
+
     nav { padding: 14px 20px; }
-    .nav-links { display: none; }
+    .nav-links { 
+      display: flex; 
+      overflow-x: auto; 
+      white-space: nowrap; 
+      -webkit-overflow-scrolling: touch; 
+      padding-bottom: 10px;
+      scrollbar-width: none;
+      width: 100%;
+      margin-top: 12px;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    nav { flex-wrap: wrap; justify-content: space-between; }
     .about-grid, .speaker-grid { grid-template-columns: 1fr; }
     .testimonials-track { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
@@ -1251,7 +1280,7 @@
     <p class="section-eyebrow">WHY LISTEN</p>
     <h2 class="section-heading">Why Should One Listen to <span style="color:var(--gold);">this Bhagavat</span></h2>
     <p class="section-sub" style="color:rgba(255,255,255,0.65);">&ldquo;श्रवणं सर्वधर्मेभ्यो वरं मन्ये तपोधनाः।॥&rdquo; &mdash; Narada Ji declares: listening to the Bhagavat is superior to all other forms of dharma.</p>
-     <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;">
+     <div class="why-listen-grid">
       <div>
         <p style="font-size:17px;line-height:1.9;color:rgba(255,255,255,0.78);margin-bottom:18px;">In this age, <strong style="color:var(--gold);">Jagadguru Swami Shri Kripalu Ji Maharaj</strong>, the greatest authority on devotion, repeatedly emphasised that without bhakti, all paths &mdash; karma, jñāna and yoga &mdash; become fruitless.</p>
         <p style="font-size:17px;line-height:1.9;color:rgba(255,255,255,0.78);margin-bottom:18px;">Shrimad Bhagavat Mahapurana, being the divine voice of God and illuminated with the devotional lives of the greatest saints, infuses the <strong style="color:var(--gold);">Nectar of Bhakti</strong> into the heart of the listener. It is the life-restoring elixir for seekers and instantly draws the soul closer to the Supreme Lord.</p>
@@ -1263,7 +1292,7 @@
         <img src="pics/vasudeva_divine.png" alt="Lord Vasudeva – Divine Illustration" style="width:100%;border-radius:8px;border:2px solid rgba(249,197,19,0.25);display:block;">
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;">
+    <div class="benefits-grid">
       <div style="background:rgba(249,197,19,0.07);border:1px solid rgba(249,197,19,0.2);border-top:3px solid var(--gold);border-radius:10px;padding:28px 24px;transition:all .3s;">
         <div style="font-size:32px;margin-bottom:14px;">🙏</div>
         <h4 style="font-family:'Cinzel',serif;font-size:16px;color:var(--gold);margin-bottom:10px;font-weight:600;">Bliss, Longevity &amp; Purushartha</h4>
@@ -1304,7 +1333,7 @@
     <p class="section-eyebrow" style="color:var(--brand-indigo);">WHAT MAKES THIS UNIQUE</p>
     <h2 class="section-heading" style="color:var(--brand-indigo);">In What Way This <span style="color:var(--brand-indigo);">Bhāgavat Is Unique</span></h2>
     <p class="section-sub" style="color:rgba(13,23,87,0.75);">This is not an ordinary recitation &mdash; it is a supreme act of benevolence offered by an exceedingly gracious heart for the welfare of all souls</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;">
+    <div class="unique-grid">
       <div>
         <p style="font-size:17px;line-height:1.9;color:rgba(13,23,87,0.82);margin-bottom:18px;">The Śrīmad Bhāgavatam is neither a historical chronicle nor a collection of mythological episodes; it is the <strong>nectar-filled, living form of devotion in scripture</strong> &mdash; revealed solely to infuse the parched hearts of beings in the age of Kali with the divine essence of bhakti.</p>
         <p style="font-size:17px;line-height:1.9;color:rgba(13,23,87,0.82);margin-bottom:18px;">Yet, it is often seen that traditional Bhāgavat kathā events become confined to ritualistic formalities or reduced to mere entertainment, thereby failing to fulfil their sacred purpose.</p>
