@@ -170,14 +170,29 @@
     margin-bottom: 10px;
     font-weight: 300;
   }
+  .hero-title-top {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(24px, 4vw, 42px);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0px;
+    line-height: 1.2;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  }
   .hero-title {
     font-family: 'Cinzel', serif;
-    font-size: clamp(32px, 6vw, 62px);
+    font-size: clamp(32px, 5vw, 52px);
     font-weight: 700;
     line-height: 1.1;
     color: var(--white);
     margin-bottom: 10px;
     text-shadow: 0 2px 40px rgba(249,197,19,0.2);
+  }
+  .hero-title-large {
+    font-size: clamp(48px, 9vw, 96px);
+    display: inline-block;
+    line-height: 1;
+    margin-top: 5px;
   }
   .hero-title-sub {
     font-family: 'Cinzel', serif;
@@ -1115,8 +1130,8 @@
       <span></span> Pancham Ved · Gyanrahasya · Udaipur <span></span>
     </div>
     <p class="hero-devanagari">श्रीमद् भागवत महापुराण</p>
-    <h1 class="hero-title">Shrimad Bhagwat<br>Mahapuran Gyanrahasya</h1>
-    <p class="hero-title-sub">Pancham Ved · Gyanrahasya · Udaipur</p>
+    <div class="hero-title-top">Pancham Ved</div>
+    <h1 class="hero-title">Shrimad Bhagwat Mahapuran<br><span class="hero-title-large">Gyanarahasya</span></h1>
     <div class="hero-divider">
       <hr><span class="hero-divider-lotus">❋</span><hr>
     </div>
