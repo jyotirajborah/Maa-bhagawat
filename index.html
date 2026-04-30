@@ -35,13 +35,25 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { 
+    scroll-behavior: smooth; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+  html::-webkit-scrollbar { 
+    display: none; 
+  }
 
   body {
     font-family: 'Cormorant Garamond', serif;
     background: var(--indigo-deep);
     color: var(--white);
     overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  body::-webkit-scrollbar {
+    display: none;
   }
 
   /* ── ORNAMENT ── */
