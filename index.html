@@ -172,7 +172,7 @@
   }
   .hero-title-top {
     font-family: 'Cinzel', serif;
-    font-size: clamp(24px, 4vw, 42px);
+    font-size: clamp(20px, 4vw, 42px);
     font-weight: 700;
     color: var(--white);
     margin-bottom: 0px;
@@ -181,15 +181,16 @@
   }
   .hero-title {
     font-family: 'Cinzel', serif;
-    font-size: clamp(32px, 5vw, 52px);
+    font-size: clamp(26px, 7vw, 52px);
     font-weight: 700;
     line-height: 1.1;
     color: var(--white);
     margin-bottom: 10px;
     text-shadow: 0 2px 40px rgba(249,197,19,0.2);
+    word-break: break-word;
   }
   .hero-title-large {
-    font-size: clamp(48px, 9vw, 96px);
+    font-size: clamp(34px, 10vw, 96px);
     display: inline-block;
     line-height: 1;
     margin-top: 5px;
@@ -275,7 +276,7 @@
   }
 
   /* ── SECTION BASE ── */
-  section { padding: 100px 24px; }
+  section { padding: 60px 24px; }
   .section-container { max-width: 1100px; margin: 0 auto; }
   .section-eyebrow {
     font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 3px;
@@ -629,15 +630,77 @@
   .slider-btn.next-btn { right: -16px; }
 
   @media (max-width: 768px) {
-
+    section { padding: 40px 16px; }
     .slider-btn.prev-btn { left: 8px; }
     .slider-btn.next-btn { right: 8px; }
+
+    .hero-content {
+      padding: 40px 16px;
+    }
+    .hero-badge {
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      padding: 8px 14px;
+      white-space: normal;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .hero-date-strip {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+    .hero-date-item {
+      border-right: none;
+      border-bottom: 1px solid rgba(249,197,19,0.2);
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-date-item:last-child {
+      border-bottom: none;
+    }
+
+    .speaker-tags {
+      justify-content: center;
+    }
+
+    .schedule-timeline::before {
+      display: none;
+    }
+    .timeline-item, 
+    .timeline-item:nth-child(odd), 
+    .timeline-item:nth-child(even) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .timeline-dot {
+      display: none;
+    }
+    .timeline-time, 
+    .timeline-item:nth-child(even) .timeline-time {
+      text-align: center;
+      padding: 0;
+      margin-bottom: 12px;
+    }
+    .timeline-content, 
+    .timeline-item:nth-child(odd) .timeline-content, 
+    .timeline-item:nth-child(even) .timeline-content {
+      padding: 0;
+      text-align: center;
+      width: 100%;
+    }
   }
 
   /* ── MAP / GET THERE ── */
   #venue {
     background: var(--brand-white);
-    padding-top: 80px; padding-bottom: 80px;
   }
   #venue .section-eyebrow { color: var(--brand-indigo); }
   #venue .section-eyebrow::before { background: linear-gradient(to right, transparent, rgba(26,35,126,0.3)); }
@@ -709,7 +772,6 @@
   /* ── REGISTER ── */
   #register {
     background: linear-gradient(135deg, #0d1757 0%, #1a237e 50%, #0d1757 100%);
-    padding: 100px 24px;
     text-align: center; position: relative; overflow: hidden;
   }
   #register::before {
@@ -1554,7 +1616,7 @@
 </section>
 
 <!-- PHOTO GALLERY -->
-<section id="gallery" style="background:#f5f6ff;padding:80px 24px;">
+<section id="gallery" style="background:#f5f6ff;">
   <div class="section-container">
     <p class="section-eyebrow" style="color:var(--brand-indigo);">GLIMPSES</p>
     <h2 class="section-heading" style="color:var(--brand-indigo);">Divine Moments from Past Gyanrahasya Pravachans</h2>
